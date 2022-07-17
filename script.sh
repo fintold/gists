@@ -51,7 +51,7 @@ sudo docker run hello-world
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 
-sudo tee /etc/docker/deamon.json <<EOF
+sudo tee /etc/docker/daemon.json <<EOF
 {
 	"exec-opts": ["native.cgroupdriver=systemd"],
 	"log-driver": "json-file",
@@ -62,7 +62,7 @@ sudo tee /etc/docker/deamon.json <<EOF
 }
 EOF
 
-sudo systemctl deamon-reload
+sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
 sudo systemctl enable kubelet 
