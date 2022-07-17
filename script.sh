@@ -1,10 +1,5 @@
 #!/bin/bash
 
-sudo apt-get update 
-
-sudo apt -y upgrade && sudo reboot now
-
-sudo apt update 
 
 sudo apt -y install curl apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
